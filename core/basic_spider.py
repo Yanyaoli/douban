@@ -57,7 +57,7 @@ def get_basic_info():
     threads = []    # 空列表用于存放线程
 
     # 创建线程
-    for start in range(0, 25, 25):
+    for start in range(0, 25, 250):
         t = threading.Thread(target=get_movie_info_worker, args=(start, headers, session, movie_info_list, links_list))   # 创建线程
         t.start()   # 启动线程
         threads.append(t)   # 添加线程到列表
